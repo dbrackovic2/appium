@@ -1,9 +1,7 @@
 const webdriverio = require("webdriverio");
 const androidOptions = require("../../helpers/caps").androidOptions;
-const app = require("../../helpers/apps").androidApiDemos;
 const assert = require("chai").assert;
 
-androidOptions.desiredCapabilities.app = app;
 
 describe("Create Android session", function() {
   let client;
@@ -19,11 +17,11 @@ describe("Create Android session", function() {
         assert.isAbove(res.value.length, 0);
       })
       .currentActivity(function(res) {
-        assert.equals(res.value, ".ApiDemos");
+        assert.equals(res.value, ".gawkbox");
       })
       .getCurrentPackage(function(res) {
         assert.equals(res.value, "io.appium.android.apis");
-      })
+      }).pause(5000)
       .end()
       .sessions(function(res) {
         assert.equals(res.value.length, 0);
