@@ -8,11 +8,12 @@ const DEFAULT_ANDROID_PLATFORM_VERSION = "";
 
 const androidCaps = {
   platformName: "Android",
-  automationName: "Appium",
+  automationName: "UiAutomator2",
   deviceName: process.env.ANDROID_DEVICE_NAME || DEFAULT_ANDROID_DEVICE_NAME,
   platformVersion:
     process.env.ANDROID_PLATFORM_VERSION || DEFAULT_ANDROID_PLATFORM_VERSION,
-  app: 'D:/QAuser/gawkbox/appium/appium/sample-code/apps/app-release.apk'
+  app: 'D:/QAuser/gawkbox/appium/appium/sample-code/apps/app-release.apk',
+  appActivity: '.MainActivity'
 };
 
 const serverConfig = {
