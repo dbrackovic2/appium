@@ -59,7 +59,7 @@ describe("Login to gawkbox app", function () {
     return client.click('android=new UiSelector().text("Account").className("android.widget.TextView")').pause(3124);
   });
 
-  it("should dignout & close app", function () {
+  it("should signout & close app", function () {
     client.swipeUp('android=new UiSelector().text("HISTORY").className("android.widget.TextView")',359,0.1).pause(999);
     client.click('android=new UiSelector().text("Sign Out").className("android.widget.TextView")').pause(5124);;
     return client.pause(431).closeApp();

@@ -4,7 +4,8 @@
   "description": "Sample tests using webdriverio",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 6000000 test/basic"
+    "test": "mocha --timeout 6000000 test/basic",
+    "test_youtube_login": "mocha --timeout 6000000 test/basic/login-youtube-android.test.js"
   },
   "author": "Daniel Graham",
   "license": "Apache-2.0",
