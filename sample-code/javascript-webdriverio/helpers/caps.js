@@ -9,11 +9,20 @@ const DEFAULT_ANDROID_PLATFORM_VERSION = "";
 const androidCaps = {
   platformName: "Android",
   automationName: "UiAutomator2",
+  //automationName: "Selendroid",
   deviceName: process.env.ANDROID_DEVICE_NAME || DEFAULT_ANDROID_DEVICE_NAME,
   platformVersion:
     process.env.ANDROID_PLATFORM_VERSION || DEFAULT_ANDROID_PLATFORM_VERSION,
-  app: 'D:/QAuser/gawkbox/appium/appium/sample-code/apps/app-release127.apk',
-  appActivity: '.MainActivity'
+  app: 'D:/QAuser/gawkbox/appium/appium/sample-code/javascript-webdriverio/app-release_1539903056_1-11.apk',
+  appActivity: '.MainActivity'  
+};
+
+const chromeCaps = {
+  platformName: "Android",
+  browserName: "Chrome",
+  deviceName: process.env.ANDROID_DEVICE_NAME || DEFAULT_ANDROID_DEVICE_NAME,
+  platformVersion:
+    process.env.ANDROID_PLATFORM_VERSION || DEFAULT_ANDROID_PLATFORM_VERSION
 };
 
 const serverConfig = {
@@ -29,6 +38,14 @@ const androidOptions = Object.assign(
   serverConfig
 );
 
+const chromeOptions = Object.assign(
+  {
+    desiredCapabilities: chromeCaps
+  },
+  serverConfig
+);
+
 module.exports = {
   androidOptions
+  //,chromeOptions
 };
